@@ -5,11 +5,15 @@ import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TabsModule } from 'ng2-bootstrap/tabs';
+import { HeaderComponent } from './header/header.component';
+import { HeroComponent } from './hero/hero.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    HeroComponent
   ],
   imports: [
     BrowserModule,
