@@ -7,11 +7,13 @@ import { TabsModule } from 'ng2-bootstrap/tabs';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
+import { HeroComponent } from './hero/hero.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    HeroComponent
   ],
   imports: [
     BrowserModule,
