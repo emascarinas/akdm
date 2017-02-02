@@ -10,3 +10,14 @@
         </div>
     </fieldset>
 </div>
+
+<ul class="headers">
+  <li *ngFor="let header of headers" (click)="onSelect(header)"
+      [class.selected]="header === selectedHero">
+    <span class="badge">{{header.id}}</span>
+    <span>{{header.title}}</span>
+    <button class="delete"
+      (click)="delete(header); $event.stopPropagation()">x</button>
+  </li>
+</ul>
+dddd
