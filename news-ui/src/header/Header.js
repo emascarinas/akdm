@@ -1,13 +1,19 @@
 import React, { Component } from 'react';
-// import logo from '../logo.svg';
 import './header.css';
+import PreviewImg from '../common/PreviewImg';
+
+var constants = require("../constants");
 
 export default class Header extends Component {
   constructor(props) {
     super(props);
-    this.state = {leftUrl: 'Mezzy', rightUrl: 'sdf'};
+    this.state =  this.getValues(constants.DEFAULT_ITEM);
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  getValues(item){
+    return JSON.parse(localStorage.getItem(item)).header;
   }
 
   handleChange(event) {
@@ -25,11 +31,13 @@ export default class Header extends Component {
       <fieldset>
               <div className="form-group">
                 <label htmlFor="textinput" className="control-label">Left Image URL</label>
-                <input type="text" id="leftUrl" className="form-control" placeholder="" defaultValue={this.state.leftUrl} onChange={this.handleChange}  />
+                <input type="text" id="leftImgUrl" className="form-control" placeholder="" defaultValue={this.state.leftImgUrl} onChange={this.handleChange}  />
+                <PreviewImg url={this.state.leftImgUrl} />
               </div>
               <div className="form-group">
                 <label htmlFor="textinput" className="control-label">Right Image URL</label>
-                <input type="text" id="rightUrl" className="form-control" placeholder="" defaultValue={this.state.rightUrl} onChange={this.handleChange}  />
+                <input type="text" id="rightImgUrl" className="form-control" placeholder="" defaultValue={this.state.rightImgUrl} onChange={this.handleChange}  />
+                <PreviewImg url={this.state.rightImgUrl} />
               </div>
             </fieldset>
     );

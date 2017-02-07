@@ -8,6 +8,8 @@ import { HeaderComponent } from './header/header.component';
 import { HeroComponent } from './hero/hero.component';
 import { ShoutComponent } from './shout/shout.component';
 import { ActivityComponent } from './activity/activity.component';
+import { HeaderService } from './header/header.service';
+
 
 @NgModule({
 	imports: [
@@ -16,6 +18,7 @@ import { ActivityComponent } from './activity/activity.component';
 	HttpModule
 	],
 	declarations: [AppComponent, HeaderComponent, HeroComponent, ShoutComponent, ActivityComponent],
-	bootstrap: [AppComponent]
+	bootstrap: [AppComponent],
+	providers: [ HeaderService]
 })
 export class AppModule {}

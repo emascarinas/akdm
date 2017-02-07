@@ -6,4 +6,7 @@ export class HeaderService {
   getHeaders(): Promise<Header[]> {
     return Promise.resolve(HEADERS);
   }
+  getHeader(): Promise<Header> {
+    return Promise.resolve(HEADERS[0]);
+  }  
 }
