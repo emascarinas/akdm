@@ -21,7 +21,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="%PUBLIC_URL%/jquery.sortable.min.js"></script> 
   </head>
   <body>
     <div class="container">
@@ -33,15 +34,15 @@
         <ul class="nav nav-tabs" role="tablist">
           <li role="presentation" class="active"><a href="#header" aria-controls="header" role="tab" data-toggle="tab">Header</a></li>
           <li role="presentation"><a href="#hero" aria-controls="hero" role="tab" data-toggle="tab">Hero</a></li>
-          <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Shout Outs</a></li>
+          <li role="presentation"><a href="#shout" aria-controls="shout" role="tab" data-toggle="tab">Shout Outs</a></li>
           <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Activities</a></li>
         </ul>
         <!-- Tab panes -->
         <div class="tab-content">
           <div role="tabpanel" class="tab-pane fade in active" id="header"></div>
           <div role="tabpanel" class="tab-pane fade" id="hero"></div>
-          <div role="tabpanel" class="tab-pane fade" id="messages">
-            <button type="button" class="btn btn-primary pull-right">Add Shout Out</button>
+          <div role="tabpanel" class="tab-pane fade" id="shout">
+            <!-- <button type="button" class="btn btn-primary pull-right">Add Shout Out</button>
             <div class="form-group">
               <label for="textinput" class="control-label">Shout Out Date</label>
               <input type="text" class="form-control" id="textinput" placeholder="">
@@ -65,7 +66,7 @@
             <div class="form-group">
               <label for="fileinput" class="control-label">Shout Out Image</label>
               <input type="file" id="fileinput" name="fileinput">
-            </div>
+            </div> -->
           </div>
           <div role="tabpanel" class="tab-pane fade" id="settings">
             <form>
@@ -132,5 +133,15 @@
       To begin the development, run `npm start`.
       To create a production bundle, use `npm run build`.
     -->
+
+
+
+        
+
+
+
+                
+
+
   </body>
   </html>
