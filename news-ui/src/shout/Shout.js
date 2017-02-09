@@ -13,15 +13,10 @@ export default class Shout extends Component {
   }
 
   componentDidMount() {
-    jQuery('.thumbnail-sortable').sortable({
-                placeholderClass: 'col-sm-6 col-md-4'
-            }).bind('sortupdate', function() {
-                  console.log(jQuery('.thumbnail'));
-});
   }  
 
   getValues(item){
-    return JSON.parse(localStorage.getItem(item)).shout;
+    return window.data.shout;
   }
 
   handleChange(event) {

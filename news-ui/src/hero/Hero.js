@@ -11,7 +11,7 @@ export default class Hero extends Component {
   }
 
   getValues(item){
-    return JSON.parse(localStorage.getItem(item)).hero;
+    return window.data.hero;
   }
 
   handleChange(event) {

@@ -13,7 +13,7 @@ export default class Header extends Component {
   }
 
   getValues(item){
-    return JSON.parse(localStorage.getItem(item)).header;
+    return window.data.header;
   }
 
   handleChange(event) {

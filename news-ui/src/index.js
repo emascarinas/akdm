@@ -5,8 +5,7 @@ import Hero from './hero/Hero';
 import Shout from './shout/Shout';
 import './index.css';
 
-var data = require('./defaultData');
-data.init();
+window.data = require('./defaultData').get();
 
 ReactDOM.render(
   <Header />,
