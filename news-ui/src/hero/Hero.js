@@ -6,17 +6,17 @@ var constants = require("../constants");
 export default class Hero extends Component {
   constructor(props) {
     super(props);
-    this.state =  this.getValues(constants.DEFAULT_ITEM);
+    this.state =  this.getValues();
     this.handleChange = this.handleChange.bind(this);
   }
 
-  getValues(item){
-    return window.data.hero;
+  getValues(){
+    return window.data[constants.KEY_HERO];
   }
 
   handleChange(event) {
     var obj = {};
-    obj[event.target.id] = event.target.value;
+    obj[event.target.id] = window.data[constants.KEY_HERO][event.target.id] = event.target.value;
     this.setState(obj);
   }
 

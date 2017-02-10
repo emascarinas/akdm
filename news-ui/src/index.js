@@ -1,5 +1,17 @@
+
+
 import React from 'react';
 import ReactDOM from 'react-dom';
+
+
+
+
+// global.jQuery = require('jquery');
+// require('../node_modules/bootstrap/dist/css/bootstrap.min.css');
+// require('../node_modules/bootstrap/dist/css/bootstrap-theme.min.css');
+// require('../node_modules/bootstrap/dist/js/bootstrap.min.js');
+
+
 import Header from './header/Header';
 import Hero from './hero/Hero';
 import Shout from './shout/Shout';

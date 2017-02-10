@@ -5,4 +5,7 @@ function define(name, value) {
     });
 }
 
-define("DEFAULT_ITEM", "ak-newsletter");
+define("KEY_HEADER", "header");
+define("KEY_HERO", "hero");
+define("KEY_SHOUT", "shout");
+define("KEY_ACTIVITY", "activity");

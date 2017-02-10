@@ -7,18 +7,18 @@ var constants = require("../constants");
 export default class Header extends Component {
   constructor(props) {
     super(props);
-    this.state =  this.getValues(constants.DEFAULT_ITEM);
+    this.state =  this.getValues();
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  getValues(item){
-    return window.data.header;
+  getValues(){
+    return window.data[constants.KEY_HEADER];
   }
 
   handleChange(event) {
     var obj = {};
-    obj[event.target.id] = event.target.value;
+    obj[event.target.id] = window.data[constants.KEY_HEADER][event.target.id] = event.target.value;
     this.setState(obj);
   }
 
