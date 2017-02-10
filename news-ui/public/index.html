@@ -24,11 +24,10 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="%PUBLIC_URL%/jquery.sortable.min.js"></script>
     <script>
-      $(function() {
-        $('.thumbnail-sortable').sortable({
+      window.testfn = function(){
+                $('.thumbnail-sortable').sortable({
           placeholderClass: 'col-sm-6 col-md-4'
         }).bind('sortupdate', function() {
-          console.log(window.data.shout);
           var arr = [];
           $( ".thumbnail.shout" ).each(function( index ) {
             var dataIndex = $( this ).data("index");
@@ -38,6 +37,9 @@
           console.log(window.data.shout);
 
         });
+      }   
+      $(function() {
+        window.testfn();
 
       });
     </script>    

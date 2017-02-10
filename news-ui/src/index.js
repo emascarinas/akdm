@@ -11,6 +11,9 @@ import ReactDOM from 'react-dom';
 // require('../node_modules/bootstrap/dist/css/bootstrap-theme.min.css');
 // require('../node_modules/bootstrap/dist/js/bootstrap.min.js');
 
+// import jquery from 'jquery';
+// window.$ = window.jQuery=jquery;
+
 
 import Header from './header/Header';
 import Hero from './hero/Hero';

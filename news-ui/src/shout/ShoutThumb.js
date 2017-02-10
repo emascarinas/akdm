@@ -8,7 +8,7 @@ export default class ShoutThumb extends Component {
                                 <div className="caption">
                                     <h3>{this.props.data.headline}</h3>
                                     <p>{this.props.data.copy}</p>
-                                    <p><a href="#" className="btn btn-primary" role="button" data-toggle="modal" data-target="#shoutModal" onClick={this.props.handleSubmitEdit}>Edit</a> <a href="#" className="btn btn-default" role="button">Delete</a></p>
+                                    <p><a href="#" className="btn btn-primary" role="button" data-toggle="modal" data-target="#shoutModal" onClick={this.props.handleSubmitEdit} data-index={this.props.index}>Edit</a> <a href="#" className="btn btn-default" role="button">Delete</a></p>
                                 </div>
                             </div>
                         </div>
