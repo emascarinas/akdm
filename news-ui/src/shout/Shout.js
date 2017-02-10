@@ -14,10 +14,10 @@ var isAdd = false;
 export default class Shout extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
-    this.state.single = {};
-    this.state.single = this.initValues();
-    this.state.list = this.getValues(constants.DEFAULT_ITEM);    
+    this.state = {
+      single : this.initValues(),
+      list: this.getValues(constants.DEFAULT_ITEM)
+    };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmitAdd = this.handleSubmitAdd.bind(this);
     this.handleSubmitEdit = this.handleSubmitEdit.bind(this);
