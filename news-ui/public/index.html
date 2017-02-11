@@ -24,24 +24,29 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="%PUBLIC_URL%/jquery.sortable.min.js"></script>
     <script>
-      window.testfn = function(){
-                $('.thumbnail-sortable').sortable({
+      window.shoutSortable = function(){
+        $('.thumbnail-sortable').sortable({
           placeholderClass: 'col-sm-6 col-md-4'
         }).bind('sortupdate', function() {
-          var arr = [];
-          $( ".thumbnail.shout" ).each(function( index ) {
-            var dataIndex = $( this ).data("index");
-            arr.push(window.data.shout[dataIndex]);
-          });
-          window.data.shout = arr;
-          console.log(window.data.shout);
-
+          window.shoutUpdateDataIndex();
         });
-      }   
+      };
+      window.shoutUpdateDataIndex = function(){
+        var arr = [];
+        window.data.shoutIndex = [];
+        $( ".thumbnail.shout" ).each(function( index ) {
+          var dataIndex = $( this ).data("index");
+          window.data.shoutIndex.push(dataIndex);
+          arr.push(window.data.shout[dataIndex]);
+        });
+        window.data.shout = arr;          
+      };
+
       $(function() {
-        window.testfn();
+        window.shoutSortable();
 
       });
+
     </script>    
   </head>
   <body>

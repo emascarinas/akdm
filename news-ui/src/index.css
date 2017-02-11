@@ -7,3 +7,9 @@ body > div.container {
 .img-preview {
 	margin: 20px 0;
 }
+.thumb-copy {
+	min-height: 60px;
+}
+.thumbnail-sortable {
+	min-height: 600px;
+}
