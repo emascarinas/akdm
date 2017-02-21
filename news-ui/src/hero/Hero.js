@@ -2,22 +2,25 @@ import React, { Component } from 'react';
 import PreviewImg from '../common/PreviewImg';
 
 var constants = require("../constants");
-
+var data = require('../defaultData').get();
 export default class Hero extends Component {
   constructor(props) {
     super(props);
     this.state =  this.getValues();
     this.handleChange = this.handleChange.bind(this);
+    window.syncGdata('hero', this.state);
   }
 
   getValues(){
-    return window.data[constants.KEY_HERO];
+    return data[constants.KEY_HERO];
   }
 
   handleChange(event) {
     var obj = {};
-    obj[event.target.id] = window.data[constants.KEY_HERO][event.target.id] = event.target.value;
+    obj[event.target.id] = event.target.value;
     this.setState(obj);
+    window.syncGdata('hero', this.state);
+    
   }
 
   render() {

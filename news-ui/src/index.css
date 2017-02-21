@@ -13,3 +13,6 @@ body > div.container {
 .thumbnail-sortable {
 	min-height: 600px;
 }
+.modal-dialog {
+	width: 80%;
+}

@@ -3,23 +3,25 @@ import './header.css';
 import PreviewImg from '../common/PreviewImg';
 
 var constants = require("../constants");
-
+var data = require('../defaultData').get();
 export default class Header extends Component {
   constructor(props) {
     super(props);
     this.state =  this.getValues();
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    window.syncGdata('header', this.state);
   }
 
   getValues(){
-    return window.data[constants.KEY_HEADER];
+    return data[constants.KEY_HEADER];
   }
 
   handleChange(event) {
     var obj = {};
-    obj[event.target.id] = window.data[constants.KEY_HEADER][event.target.id] = event.target.value;
+    obj[event.target.id] = event.target.value;
     this.setState(obj);
+    window.syncGdata('header', this.state);
   }
 
   handleSubmit(event) {

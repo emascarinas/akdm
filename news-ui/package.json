@@ -2,13 +2,14 @@
   "name": "news-ui",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://emascarinas.github.io/akdm/",  
+  "homepage": "https://emascarinas.github.io/akdm/",
   "devDependencies": {
     "react-scripts": "0.8.5"
   },
   "dependencies": {
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "wolfy87-eventemitter": "^5.1.0"
   },
   "scripts": {
     "start": "react-scripts start",

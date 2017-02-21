@@ -10,6 +10,7 @@ import ShoutThumb from './ShoutThumb';
 
 
 var constants = require("../constants");
+var data = require('../defaultData').get();
 var isAdd = false;
 export default class Shout extends Component {
   constructor(props) {
@@ -23,15 +24,11 @@ export default class Shout extends Component {
     this.handleSubmitEdit = this.handleSubmitEdit.bind(this);
     this.handleSubmitDelete = this.handleSubmitDelete.bind(this);
     this.handleDone = this.handleDone.bind(this);
+    window.syncGdata('shout', this.state);
   }
 
   componentDidUpdate(prevProps, prevState) {
-    //console.log(prevProps);
-    //console.log(prevState);
      window.shoutSortable();
-    // window.shoutUpdateDataIndex();
-    // this.syncShoutList();
-
   } 
   initValues() {
     return {
@@ -47,7 +44,7 @@ export default class Shout extends Component {
   }
 
   getValues(){
-    return window.data.shout;
+    return data.shout;
   }
 
   handleChange(event) {
@@ -55,12 +52,14 @@ export default class Shout extends Component {
     obj.single = this.state.single;
     obj.single[event.target.id] = event.target.value;
     this.setState(obj);
+    window.syncGdata('shout', this.state);
   }
   handleSubmitAdd(event) {
     var obj = {};
     obj.single = this.initValues();
     this.setState(obj);
     isAdd = true;
+    window.syncGdata('shout', this.state);
   }   
   handleSubmitEdit(event) {
     const index = event.target.dataset.index;
@@ -68,6 +67,7 @@ export default class Shout extends Component {
     obj.single = this.state.list[index];
     this.setState(obj);
     isAdd = false;
+    window.syncGdata('shout', this.state);
   }   
   handleSubmitDelete(event) {
     const index = event.target.dataset.index;
@@ -77,21 +77,22 @@ export default class Shout extends Component {
       list : this.state.list
     }
     this.setState(obj);
+    window.syncGdata('shout', this.state);
   }   
-  syncShoutList(){
-    if(window.data.shoutIndex){
-      var arr = [];
-      var lst = this.state.list;
-      window.data.shoutIndex.map(function(index){
-        arr.push(lst[index]);
-      });
-      var obj = {
-        list : arr
-      };
-      //this.setState(obj);
-      window.data.shout = arr;
-    }
-  }
+  // syncShoutList(){
+  //   if(window.data.shoutIndex){
+  //     var arr = [];
+  //     var lst = this.state.list;
+  //     window.data.shoutIndex.map(function(index){
+  //       arr.push(lst[index]);
+  //     });
+  //     var obj = {
+  //       list : arr
+  //     };
+  //     //this.setState(obj);
+  //     window.data.shout = arr;
+  //   }
+  // }
   handleDone(event) {
    if(isAdd){
      var obj = {};
