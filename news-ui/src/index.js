@@ -12,10 +12,7 @@ import ReactDOM from 'react-dom';
 // window.$ = window.jQuery=jquery;
 
 
-import Header from './header/Header';
-import Hero from './hero/Hero';
-import Shout from './shout/Shout';
-import Spitout from './spitout/Spitout';
+import Main from './Main';
 import './index.css';
 
 window.gdata = {};
@@ -25,21 +22,7 @@ window.syncGdata = function(key, value){
 };
 
 ReactDOM.render(
-  <Header />,
-  document.getElementById('header')
+  <Main />,
+  document.getElementById('main')
 );
 
-ReactDOM.render(
-  <Hero />,
-  document.getElementById('hero')
-);
-
-ReactDOM.render(
-  <Shout />,
-  document.getElementById('shout')
-);
-
-ReactDOM.render(
-  <Spitout />,
-  document.getElementById('spitout')
-);

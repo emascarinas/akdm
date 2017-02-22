@@ -21,17 +21,17 @@ export default class Spitout extends Component {
   }
 
   handleClick(event) {
-    var obj = {};
     var val = this.getDesktopValues();
-    obj.desktop = val;
-    this.setState(obj)
+    this.setState({
+      desktop : val
+    });
   }
 
   getHeroHeadline(str){
-    return str.replace(/<hero-headline>/g, window.gdata.hero.headline);
+    return str.replace(/<hero-headline>/g, this.props.hero.headline);
   }  
   getHeroCopy(str){
-    return str.replace(/<hero-copy>/g, window.gdata.hero.copy);
+    return str.replace(/<hero-copy>/g, this.props.hero.copy);
   }
   getDesktopValues() {
     var str = data.desktop;

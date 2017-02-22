@@ -19,7 +19,8 @@ Hope you all enjoy Super Bowl Sunday. Go Sports!
 XO.
 <br>
 Jules`,
-                "imgUrl" : "https://gallery.mailchimp.com/7bd4741878427bfeea78e4c2e/images/e82df3d7-374e-4bee-bcf8-4a959c1af176.png"
+                "imgUrl" : "https://gallery.mailchimp.com/7bd4741878427bfeea78e4c2e/images/e82df3d7-374e-4bee-bcf8-4a959c1af176.png",
+                "imgWidth" : "340"
             },
             "shout" : [
             {
